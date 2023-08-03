@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantary</title>
+    <style>
+        body {
+            background-color:rgb(46, 7, 43);
+        }
+        marquee {
+            color: rgb(255, 255, 255);
+        }
+        .table {
+            background-color: #4d1a55;
+        }
+        #table-heading {
+            background-color:rgb(94, 40, 83);
+            color:rgb(255, 255, 255);
+        }
+        #heading {
+            background-color:hwb(329 16% 45%);
+            text-align: center;
+            color:rgb(231, 231, 255);
+        }
+        #subjects {
+            background-color: rgb(227, 180, 245);
+            color:rgb(59, 59, 41);
+        }
+        .credits {
+            background-color: rgb(234, 254, 255);
+            color:rgb(24, 21, 21);
+        }
+        .credits-background {
+            background-color: rgb(137, 129, 194);
+        }
+        .marks-input {
+            background-color: rgb(19, 25, 88);
+            width: 50px;
+            color:rgb(123, 228, 228);
+        }
+        .buttons {
+            background-color: rgb(89, 194, 194);
+        }
+        #result {
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <marquee id="marquee">Follow my instagram @kishan_6145.</marquee>
+    <table class="table" cellspacing="2" cellpadding="3" border="1" align="center">
+        <tr id="table-heading">
+            <td colspan="3" align="center">SGPA calculator</td>
+        </tr>
+        <tr id="heading">
+            <td>Subjects</td>
+            <td>Credits</td>
+            <td align="center">Marks</td>
+        </tr>
+        <tr>
+            <td id="subjects">Mathematics</td>
+            <td class="credits-background"><select class="credits" id="credit_1">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_1" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">Physics</td>
+            <td class="credits-background"><select class="credits" id="credit_2">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_2" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">POP</td>
+            <td class="credits-background"><select class="credits" id="credit_3">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_3" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">PLC</td>
+            <td class="credits-background"><select class="credits" id="credit_4">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_4" value="0"></td>
+        </tr>
+        </td>
+        
+        <tr>
+            <td id="subjects">ESC-2</td>
+            <td class="credits-background"><select class="credits" id="credit_5">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_5" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">English</td>
+            <td class="credits-background"><select class="credits" id="credit_6">
+                <option value="0">0</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_6" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">IDT</td>
+            <td class="credits-background"><select class="credits" id="credit_7">
+                <option value="0">0</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_7" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td id="subjects">Kannada</td>
+            <td class="credits-background"><select class="credits" id="credit_8">
+                <option value="0">0</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+            <td><input class="marks-input" type="number" id="marks_8" value="0"></td>
+        </tr>
+        </td>
+        <tr>
+            <td class="buttons" colspan="3" align="center">
+                <input type="button" value="reset" onclick="reset()">
+                <input type="button" value="calculate" onclick="calculate()">
+            </td>
+        </tr>
+    </table>
+    <p id="result" align="center"><br></p>
+    <p id="result1" align="center"><br></p>
+
+    <script>
+        numberOfSubjects = 8;
+        var calculateSgpa = true;
+        function reset(){
+            document.getElementById("credit_1").value = "4";
+            document.getElementById("credit_2").value = "4";
+            document.getElementById("credit_3").value = "3";
+            document.getElementById("credit_4").value = "3";
+            document.getElementById("credit_5").value = "3";
+            document.getElementById("credit_6").value = "1";
+            document.getElementById("credit_7").value = "1";
+            document.getElementById("credit_8").value = "1";
+
+            for(let i=1;i<=numberOfSubjects;i++){
+                document.getElementById("marks_" + i).value = "0";
+            }
+        }
+
+        function marks_reduce(marks){
+            if(marks>100){
+                alert("Fool!!! Enter marks between 0 and 100.\nThough only a fool like you could get a 0.");
+                calculateSgpa = false;
+                return marks%100;
+            }
+            else if(marks>=90){
+                return 10;
+            }
+            else if(marks>=80){
+                return 9;
+            }
+            else if(marks>=70){
+                return 8;
+            }
+            else if(marks>=60){
+                return 7;
+            }
+            else if(marks>=55){
+                return 6;
+            }
+            else if(marks>=50){
+                return 5;
+            }
+            else if(marks>=40){
+                return 4;
+            }
+            else if(marks>=0){
+                return 0;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        function calculate(){
+            let marks = [];
+            let credits = [];
+            for(let i=1; i<=numberOfSubjects; i++){
+                marks[i-1] = parseInt(marks_reduce(document.getElementById("marks_" + i).value));
+            }
+
+            total_credit = 0;
+            for(let i=1; i<=numberOfSubjects; i++){
+                total_credit += parseInt(document.getElementById("credit_" + i).value);
+                credits[i-1] = parseInt(document.getElementById("credit_" + i).value);
+            }
+            
+            
+            numerator = 0;
+            for(let i=1; i<=numberOfSubjects; i++){
+                numerator += credits[i-1]*marks[i-1];
+            }
+
+            console.log("total credit " + total_credit);
+            console.log("credits array " + credits);
+            console.log("marks array " + marks);
+
+            let SGPA = numerator/total_credit;
+            console.log("SGPA = " + SGPA);
+            if(calculateSgpa){
+                if(SGPA >= 9.5){
+                    document.getElementById("result").innerHTML = "WOW!!! Your SGPA is " + SGPA + ".";
+                }
+                else if(SGPA >= 8){
+                    document.getElementById("result").innerHTML = "Good. Your SGPA is " + SGPA + ".";
+                }
+                else if(SGPA >= 7.5){
+                    document.getElementById("result").innerHTML = "Your SGPA is " + SGPA + ".";
+                }
+                else if(SGPA >= 6){
+                    document.getElementById("result").innerHTML = "Your SGPA is " + SGPA + ".<br>You can do better.";
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Your SGPA is " + SGPA + ".<br>You are a failure, disgrace to your family."
+                }
+                //document.getElementById("result1").innerHTML = "Your SGPA is " + SGPA + ".";
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
